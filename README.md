@@ -1,30 +1,24 @@
-# Schedule Management System
+# Scheduler
 
-## Description
+Meeting and room scheduling system with full CRUD for users, rooms, and meetings.
 
-Schedule management system which is responsible for scheduling meetings and performing all the crud operations on users, rooms and meetings.
+**Stack**
 
-## Installation
+React · Ant Design · MUI · MongoDB · Axios · React Router
 
-### 1) Clone the repository:
-```
-git clone https://gitlab.com/chiragsbagde/scheduler.git
-```
+**Setup**
 
-### 2) Dependencies installation
-On the project root folder, run:
-```
+```bash
+git clone https://github.com/chiragbagde/scheduler.git
+cd scheduler
 npm install
+npm start
 ```
 
-### 3) Start MongoDB server
-Initiating MongoDB for the API
-```
-sudo service mongod start
-mongo
-```
+Requires a local MongoDB instance. Start it with `sudo service mongod start` before running the app.
 
-### 4) Walk through
+**Features**
 
-The navbar consists of three menu tabs users, rooms, meetings. Each with its inidividual features. 
-You can add, delete, update Users, rooms and schedule meetings by clicking the Sidebar component.
+- Manage users, rooms, and meetings from a sidebar navigation
+- Schedule meetings by selecting a room, time slot, and attendees
+- Full CRUD on all entities
