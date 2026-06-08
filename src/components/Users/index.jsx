@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-import UsersApi from "../../apis/users";
+import usersApi from "../../apis/users";
 import { useNavigate } from "react-router-dom";
 import { Button, Space } from "antd";
-import { CloseCircleOutlined} from "@ant-design/icons";
-import usersApi from "../../apis/users";
+import { CloseCircleOutlined } from "@ant-design/icons";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
@@ -14,10 +13,10 @@ const Users = () => {
 
   const fetchUsers = async () => {
     try {
-      const { data: users } = await UsersApi.list();
+      const { data: users } = await usersApi.list();
       setUsers(users.data);
     } catch (error) {
-      console.log(error);
+      console.error(error);
     } finally {
       setLoading(false);
     }
@@ -33,7 +32,7 @@ const Users = () => {
       await fetchUsers();
     }
     catch (error) {
-      console.log(error);
+      console.error(error);
     }
     finally {
     setDeleteAlert(false);
